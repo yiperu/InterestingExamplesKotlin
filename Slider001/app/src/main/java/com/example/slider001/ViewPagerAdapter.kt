@@ -9,10 +9,9 @@ import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 
 
-class ViewPagerAdapter(private val context: Context): PagerAdapter() {
+class ViewPagerAdapter(private val context: Context, private val images: Array<Int>): PagerAdapter() {
 
     private var layoutInflater: LayoutInflater?=null
-    private val images = arrayOf(R.drawable.ironspider004,R.drawable.ironspider007,R.drawable.ironspider005,R.drawable.ironspider006)
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
 
