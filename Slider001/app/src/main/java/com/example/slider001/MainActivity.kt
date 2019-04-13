@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var fragment = SliderFragment.newInstance("dato1", "dato2")
+        supportFragmentManager.beginTransaction().add(R.id.frameContainer, fragment, "FragmentA").commit()
+
         viewpager = findViewById(R.id.viewPager)
         val adapter = ViewPagerAdapter(this)
         viewpager.adapter = adapter

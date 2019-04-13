@@ -31,14 +31,12 @@ class ViewPagerAdapter(private val context: Context): PagerAdapter() {
         val image = v.findViewById<View>(R.id.imageView) as ImageView
         image.setImageResource(images[position])
 
-
         val vp = container as ViewPager
         vp.addView(v, 0)
         return v
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        super.destroyItem(container, position, `object`)
 
         val vp = container as ViewPager
         val v = `object` as View
