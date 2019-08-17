@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleGetInfo</string>
+    <string name="title_main">SpiderMans</string>
+    <string name="new_title">La lista de los SpiderMans</string>
+</resources>
