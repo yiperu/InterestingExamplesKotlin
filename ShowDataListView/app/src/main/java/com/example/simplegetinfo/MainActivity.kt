@@ -1,5 +1,6 @@
 package com.example.simplegetinfo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         list_view_id.adapter = arrayAdapter
 
         list_view_id.setOnItemClickListener { _, _, i, l ->
-            Toast.makeText(applicationContext, "Selecciono a " + arrayList.get(i), Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
         }
     }
 }
