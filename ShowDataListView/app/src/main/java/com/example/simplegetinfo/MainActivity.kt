@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         list_view_id.setOnItemClickListener { _, _, i, l ->
             val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("nombre", arrayList.get(i))
             startActivity(intent)
         }
     }
