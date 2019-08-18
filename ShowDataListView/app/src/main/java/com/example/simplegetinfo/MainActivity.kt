@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.loopj.android.http.AsyncHttpClient
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +13,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+// https://s3.amazonaws.com/courseware.codeschool.com/super_sweet_android_time/API/CandyCoded.json
+
 
         txt_title.setText(getString(R.string.new_title))
 
@@ -33,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         arrayList.add("SPIDER-MAN NOIR")
         arrayList.add("SPIDER-MA'AM")
         arrayList.add("OLD MAN SPIDER")
+
+        // https://s3.amazonaws.com/courseware.codeschool.com/super_sweet_android_time/API/CandyCoded.json
 
         var arrayAdapter: ArrayAdapter<String> =
             ArrayAdapter<String>(this, R.layout.layout_text_item, R.id.txt_item_id, arrayList)
