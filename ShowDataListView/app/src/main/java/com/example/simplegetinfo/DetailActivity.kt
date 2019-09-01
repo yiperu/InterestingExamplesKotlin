@@ -13,5 +13,8 @@ class DetailActivity : AppCompatActivity() {
         if(intent != null && intent.hasExtra("nombre")){
             textView.setText(intent.getStringExtra("nombre"))
         }
+
     }
+
+
 }
